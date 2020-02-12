@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JVocabApp</string>
+    <string name="vocab">example</string>
+    <string name="pre">previous</string>
+    <string name="next">next</string>
+    <string name="pre_toast">previous clicked</string>
+    <string name="next_toast">next clicked</string>
+</resources>
