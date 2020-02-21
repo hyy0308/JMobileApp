@@ -1,8 +1,18 @@
 <resources>
-    <string name="app_name">JVocabApp</string>
+    <string name="app_name">Japanese Vocab App</string>
     <string name="vocab">example</string>
     <string name="pre">previous</string>
     <string name="next">next</string>
     <string name="pre_toast">previous clicked</string>
     <string name="next_toast">next clicked</string>
+    <string name="example_vocab1">example vocab1</string>
+    <string name="example_vocab2">example vocab2</string>
+    <string name="example_vocab3">example vocab3</string>
+    <string name="example_vocab4">example vocab4</string>
+    <string name="example_vocab1_trans1">example vocab1 trans 1</string>
+    <string name="example_vocab1_trans2">example vocab2 trans 2</string>
+    <string name="example_vocab1_trans3">example vocab3 trans 3</string>
+    <string name="example_vocab1_trans4">example vocab4 trans 4</string>
+
+
 </resources>
