@@ -26,22 +26,41 @@ public class VocabActivity extends AppCompatActivity {
         setContentView(R.layout.activity_vocab);
 
         exampleVocabTextView = (TextView) findViewById(R.id.vocab_text_view);
+        int question = vocabDataBase[mCurrentIndex].getVocabId();
+        exampleVocabTextView.setText(question);
 
         mPreButton = (Button) findViewById(R.id.pre);
         mPreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(VocabActivity.this,
-                        R.string.pre_toast,
-                        Toast.LENGTH_SHORT).show();
+                if(mCurrentIndex > 0)
+                {
+                    mCurrentIndex = mCurrentIndex - 1;
+                    updateQuestion();
+                }
+                else
+                {
+                    Toast.makeText(VocabActivity.this,
+                            R.string.top_word,
+                            Toast.LENGTH_SHORT).show();
+                }
             }
         });
         mNextButton = (Button) findViewById(R.id.next);
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mCurrentIndex = (mCurrentIndex + 1) % vocabDataBase.length;
-                updateQuestion();
+                if(mCurrentIndex < 3)
+                {
+                    mCurrentIndex = mCurrentIndex + 1;
+                    updateQuestion();
+                }
+                else
+                {
+                    Toast.makeText(VocabActivity.this,
+                            R.string.end_word,
+                            Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
